@@ -1,0 +1,24 @@
+{% extends "base.html"%}
+
+{% block title%}
+  FUNNY NAME
+{% endblock%}
+
+{% block content%}
+
+
+  {%if name%}
+    <h1>Hello World, {{name}}</h1>
+  {%else%}
+    <h1>Hello World</h1>
+  {%endif%}
+
+  <form action="{{url_for('form')}}" method="post">
+    <label for="first_n">First Name:</label>
+    <input type="text" name="first_n" value="">
+    <button type="button" name="button">Submit</button>
+  </form>
+
+
+
+{% endblock %}
